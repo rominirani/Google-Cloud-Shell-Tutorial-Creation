@@ -1,9 +1,27 @@
-const language = require('@google-cloud/language')({
-    projectId: '<your-project-id>',
-    keyFilename: 'key.json'
-    });
+// Imports the Google Cloud client library
+const language = require('@google-cloud/language');
 
-language.detectSentiment('Google Natural Language API is a fantastic API which gives highly accurate results. I love it.',{'verbose':true}).then((result) => {
-    console.log('Score:', result[0].score);
-    console.log('Magnitude:', result[0].magnitude);
-    });
+// Instantiates a client
+const client = new language.LanguageServiceClient();
+
+// The text to analyze
+const text = 'Google Natural Language API is fantastic. It gives me great results and I love it.';
+
+const document = {
+  content: text,
+  type: 'PLAIN_TEXT',
+};
+
+// Detects the sentiment of the text
+client
+  .analyzeSentiment({document: document})
+  .then(results => {
+    const sentiment = results[0].documentSentiment;
+
+    console.log(`Text: ${text}`);
+    console.log(`Sentiment score: ${sentiment.score}`);
+    console.log(`Sentiment magnitude: ${sentiment.magnitude}`);
+  })
+  .catch(err => {
+    console.error('ERROR:', err);
+  });
