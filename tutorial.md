@@ -63,6 +63,8 @@ You should see both a score and magnitude provided for the sentence. You can cha
 
 ## Conclusion
 
+`walkthough conclusion-trophy`
+
 Thanks for completing this tutorial. I hope you enjoyed the power of the Google Natural Language API.
 
 ### Next Steps:
