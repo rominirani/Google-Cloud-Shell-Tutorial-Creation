@@ -6,7 +6,7 @@ We shall use the Google Natural Language API to demonstrate how easy it is to ge
 ### Prerequisites
 
  -  You have a Google Cloud Platform account and a Google Project (note the Google Project Id).
- -  You have enabled the Google Cloud Natural Language API for the above project. To do that, go to the Cloud Console, click on the main menu, then APIs and Services --> Library. Type in Natural Language API and select + enable it. 
+ -  You have enabled the Google Cloud Natural Language API for the above project. To do that, go to the Cloud Console, click on the main menu, then APIs and Services --> Library. Type in Natural Language API and select + enable it OR click [here](https://console.cloud.google.com/flows/enableapi?apiid=language.googleapis.com).
  -  You will also need a Service Account to invoke the Natural Language API from our own application. We shall do that in the next step.
 
 ## Service Account Creation
@@ -45,7 +45,7 @@ npm install --save @google-cloud/language
 
 Let us go through the JavaScript file to understand the source code. 
 
-Click here: `walkthrough editor-open-file "Google-Cloud-Shell-Tutorial/code/index.js" "Open index.js"`
+Click here: `walkthrough editor-open-file "Google-Cloud-Shell-Tutorial-Creation/code/index.js" "Open index.js"`
 
 The code is taken from the official Github project present over [here](https://github.com/googleapis/nodejs-language).
 
