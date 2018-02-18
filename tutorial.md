@@ -13,7 +13,7 @@ We shall use the Google Natural Language API to demonstrate how easy it is to ge
 
 First up, let's create an environment variable to store your Project Id. Please use the code snippet below to set the ``PROJECT_ID`` variable as given below:
 
-```SET $PROJECT_ID=<your_project_id>```
+`SET $PROJECT_ID=<your_project_id>`
 
 Use the following ``gcloud`` commands to create a service account.
 
@@ -23,7 +23,7 @@ Use the following ``gcloud`` commands to create a service account.
 
 Now, let us install the Node.js library for Google Natural Language API via the command given below:
 
-```npm install @google-cloud/language```
+`npm install @google-cloud/language`
 
 ## Source Code
 
