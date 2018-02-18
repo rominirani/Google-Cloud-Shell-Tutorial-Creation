@@ -13,23 +13,39 @@ We shall use the Google Natural Language API to demonstrate how easy it is to ge
 
 First up, let's create an environment variable to store your Project Id. Please use the code snippet below to set the `PROJECT_ID` variable as given below:
 
-```export PROJECT_ID=<your_project_id>```
+```bash
+export PROJECT_ID=<your_project_id>
+```
 
-Use the following `gcloud` commands to create a service account.
+Use the following `gcloud` commands to create a service account named `nlpapi-quickstart` as shown below:
 
-```gcloud iam service-accounts create nlpapi-quickstart; \ gcloud iam service-accounts keys create key.json --iam-account \ nlpapi-quickstart@$PROJECT_ID.iam.gserviceaccount.com \ && export GOOGLE_APPLICATION_CREDENTIALS=key.json```
+```bash
+gcloud iam service-accounts create nlpapi-quickstart
+```
+Next up, we generate the service account JSON key that will get downloaded to your current folder as `key.json` file. 
+
+```bash
+gcloud iam service-accounts keys create key.json --iam-account nlpapi-quickstart@$PROJECT_ID.iam.gserviceaccount.com
+```
+Finally, we use the APPLICATION DEFAULT CREDENTIALS and set the variable as given below:
+
+```bash
+export GOOGLE_APPLICATION_CREDENTIALS=key.json
+```
 
 ## Use npm to install dependencies
 
 Now, let us install the Node.js library for Google Natural Language API via the command given below:
 
-```npm install --save @google-cloud/language```
+```bash
+npm install --save @google-cloud/language
+```
 
 ## Source Code
 
 Let us go through the JavaScript file to understand the source code. 
 
-Click here: `walkthrough editor-open-file ./code/index.js "Open index.js"`
+Click here: `walkthrough editor-open-file "Google-Cloud-Shell-Tutorial/code/index.js" "Open index.js"`
 
 The code is taken from the official Github project present over [here](https://github.com/googleapis/nodejs-language).
 
@@ -37,9 +53,11 @@ The code is taken from the official Github project present over [here](https://g
 
 We are ready to run our application and see the results. 
 
-Run the ``index.js`` file via the command below:
+Run the `index.js` file via the command below:
 
-```node index.js```
+```bash
+node index.js
+```
 
 You should see both a score and magnitude provided for the sentence. You can change the sentence in the code file and try the API again, if you like. 
 
