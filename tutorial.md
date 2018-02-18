@@ -30,8 +30,7 @@ gcloud iam service-accounts keys create key.json --iam-account nlpapi-quickstart
 Finally, we use the APPLICATION DEFAULT CREDENTIALS and set the variable as given below:
 
 ```bash
-export GOOGLE_APPLICATION_CREDENTIALS=key.json
-```
+export GOOGLE_APPLICATION_CREDENTIALS=key.json```
 
 ## Use npm to install dependencies
 
@@ -45,7 +44,7 @@ npm install --save @google-cloud/language
 
 Let us go through the JavaScript file to understand the source code. 
 
-Click here: `walkthrough editor-open-file "Google-Cloud-Shell-Tutorial-Creation/code/index.js" "Open index.js"`
+Click here: `walkthrough editor-open-file "Google-Cloud-Shell-Tutorial-Creation/index.js" "Open index.js"`
 
 The code is taken from the official Github project present over [here](https://github.com/googleapis/nodejs-language).
 
@@ -63,7 +62,7 @@ You should see both a score and magnitude provided for the sentence. You can cha
 
 ## Conclusion
 
-`walkthough conclusion-trophy`
+`walkthrough conclusion-trophy`
 
 Thanks for completing this tutorial. I hope you enjoyed the power of the Google Natural Language API.
 
