@@ -11,11 +11,11 @@ We shall use the Google Natural Language API to demonstrate how easy it is to ge
 
 ## Service Account Creation
 
-First up, let's create an environment variable to store your Project Id. Please use the code snippet below to set the ``PROJECT_ID`` variable as given below:
+First up, let's create an environment variable to store your Project Id. Please use the code snippet below to set the `PROJECT_ID` variable as given below:
 
-`SET $PROJECT_ID=<your_project_id>`
+```export PROJECT_ID=<your_project_id>```
 
-Use the following ``gcloud`` commands to create a service account.
+Use the following `gcloud` commands to create a service account.
 
 ```gcloud iam service-accounts create nlpapi-quickstart; \ gcloud iam service-accounts keys create key.json --iam-account \ nlpapi-quickstart@$PROJECT_ID.iam.gserviceaccount.com \ && export GOOGLE_APPLICATION_CREDENTIALS=key.json```
 
@@ -23,13 +23,15 @@ Use the following ``gcloud`` commands to create a service account.
 
 Now, let us install the Node.js library for Google Natural Language API via the command given below:
 
-`npm install @google-cloud/language`
+```npm install --save @google-cloud/language```
 
 ## Source Code
 
 Let us go through the JavaScript file to understand the source code. 
 
 Click here: `walkthrough editor-open-file ./code/index.js "Open index.js"`
+
+The code is taken from the official Github project present over [here](https://github.com/googleapis/nodejs-language).
 
 ## Run the application
 
