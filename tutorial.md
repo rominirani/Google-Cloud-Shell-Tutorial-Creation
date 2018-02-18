@@ -30,7 +30,8 @@ gcloud iam service-accounts keys create key.json --iam-account nlpapi-quickstart
 Finally, we use the APPLICATION DEFAULT CREDENTIALS and set the variable as given below:
 
 ```bash
-export GOOGLE_APPLICATION_CREDENTIALS=key.json```
+export GOOGLE_APPLICATION_CREDENTIALS=key.json
+```
 
 ## Use npm to install dependencies
 
