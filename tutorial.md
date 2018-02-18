@@ -29,7 +29,7 @@ Now, let us install the Node.js library for Google Natural Language API via the 
 
 Let us go through the JavaScript file to understand the source code. 
 
-Click here: `walkthrough editor-open-file code/index.js "Open index.js"`
+Click here: `walkthrough editor-open-file ./code/index.js "Open index.js"`
 
 ## Run the application
 
